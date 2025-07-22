@@ -47,6 +47,15 @@ CUDA_VISIBLE_DEVICES=0,1 OMP_NUM_THREADS=8 python -m torch.distributed.launch \
   --exp_name test --val_freq 1 --val_interval 50
 ```
 
+Example  test command:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python main.py \
+    --test --ckpts ckpt-best.pth \
+    --config ./MAFE/cfgs/PCN_models/Mafe_attention.yaml \
+    --exp_name test
+```
+
 Please adjust parameters according to your GPU availability and config file paths.
 
 ---
