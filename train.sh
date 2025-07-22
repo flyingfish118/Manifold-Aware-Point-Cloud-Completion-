@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1 OMP_NUM_THREADS=8 python -m torch.distributed.launch --master_port=12223 --nproc_per_node=2 main.py --launcher pytorch --sync_bn --config /home/wangdongzhihan/sjn/MAFE/cfgs/PCN_models/Mafe_attention.yaml  --exp_name test --val_freq 1 --val_interval 50
